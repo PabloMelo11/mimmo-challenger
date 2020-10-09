@@ -5,20 +5,18 @@ export const Container = styled.View`
 `;
 
 export const Content = styled.View`
-  padding: 42px 23px;
+  padding: 42px 36px;
 `;
 
-export const TitleMimo = styled.Text`
-  color: #00c3a3;
-  font-size: 35px;
-  font-family: 'Poppins-Bold';
-  margin-bottom: 23px;
+export const ImageLogo = styled.Image`
+  margin-left: -13px;
 `;
 
 export const TextWelcome = styled.Text`
   color: #00c3a3;
   font-size: 35px;
   font-family: 'Poppins-Bold';
+  margin-top: 23px;
 `;
 
 export const TextSub = styled.Text`
@@ -33,6 +31,12 @@ export const TextYourself = styled.Text`
   font-size: 20px;
   font-family: 'Poppins-Regular';
   margin-top: 21px;
+`;
+
+export const ImageGetOut = styled.Image`
+  position: absolute;
+  bottom: 67px;
+  left: 158px;
 `;
 
 export const ButtonStart = styled.TouchableOpacity`

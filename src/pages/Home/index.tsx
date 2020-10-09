@@ -1,13 +1,17 @@
 import React from 'react';
 import { Image } from 'react-native';
 
+import logoMimo from '../../assets/logo.png';
+import imageGetOut from '../../assets/sair-da-fila.png';
+
 import {
   Container,
   Content,
-  TitleMimo,
+  ImageLogo,
   TextWelcome,
   TextSub,
   TextYourself,
+  ImageGetOut,
   ButtonStart,
   ButtonStartText,
 } from './styles';
@@ -17,7 +21,7 @@ const Home: React.FC = () => {
     <>
       <Container>
         <Content>
-          <TitleMimo>mimo</TitleMimo>
+          <ImageLogo source={logoMimo} />
 
           <TextWelcome>Bem vindo à Mimoo!</TextWelcome>
 
@@ -28,6 +32,8 @@ const Home: React.FC = () => {
           </TextYourself>
         </Content>
       </Container>
+
+      <ImageGetOut source={imageGetOut} />
 
       <ButtonStart>
         <ButtonStartText>Começar</ButtonStartText>
