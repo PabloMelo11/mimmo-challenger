@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Image } from 'react-native';
 
 import {
   Container,
@@ -8,23 +8,31 @@ import {
   TextWelcome,
   TextSub,
   TextYourself,
+  ButtonStart,
+  ButtonStartText,
 } from './styles';
 
 const Home: React.FC = () => {
   return (
-    <Container>
-      <Content>
-        <TitleMimo>mimo</TitleMimo>
+    <>
+      <Container>
+        <Content>
+          <TitleMimo>mimo</TitleMimo>
 
-        <TextWelcome>Bem vindo à Mimoo!</TextWelcome>
+          <TextWelcome>Bem vindo à Mimoo!</TextWelcome>
 
-        <TextSub>Alegre. Divertido. Relevante. Você vai adorar!</TextSub>
+          <TextSub>Alegre. Divertido. Relevante. Você vai adorar!</TextSub>
 
-        <TextYourself>
-          Nos conte um pouco sobre você e ganhe pontos!
-        </TextYourself>
-      </Content>
-    </Container>
+          <TextYourself>
+            Nos conte um pouco sobre você e ganhe pontos!
+          </TextYourself>
+        </Content>
+      </Container>
+
+      <ButtonStart>
+        <ButtonStartText>Começar</ButtonStartText>
+      </ButtonStart>
+    </>
   );
 };
 
