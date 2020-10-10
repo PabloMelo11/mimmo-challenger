@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import logoMimo from '../../assets/logo.png';
 import imageGetOut from '../../assets/sair-da-fila.png';
@@ -17,6 +17,10 @@ import {
 } from './styles';
 
 const Home: React.FC = () => {
+  const navigation = useNavigation();
+
+  const handleNavigateName = () => navigation.navigate('Name');
+
   return (
     <>
       <Container>
@@ -35,7 +39,7 @@ const Home: React.FC = () => {
 
       <ImageGetOut source={imageGetOut} />
 
-      <ButtonStart>
+      <ButtonStart onPress={handleNavigateName}>
         <ButtonStartText>Começar</ButtonStartText>
       </ButtonStart>
     </>
