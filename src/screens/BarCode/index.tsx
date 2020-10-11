@@ -4,7 +4,6 @@ import { useNavigation } from '@react-navigation/native';
 import { RNCamera } from 'react-native-camera';
 import { View, Text, TouchableOpacity } from 'react-native';
 import BarcodeMask from 'react-native-barcode-mask';
-import { BlurView } from '@react-native-community/blur';
 
 import {
   Container,
@@ -25,6 +24,9 @@ const BarCode: React.FC = () => {
   const [barCode, setBarCode] = useState<string[]>(['000000000000000']);
 
   const handleNavigateProducts = () => navigation.goBack();
+
+  const handleNavigateNewProduct = () =>
+    navigation.navigate('NewProduct', { bar_code: barCode });
 
   const PendingView = () => (
     <View
@@ -100,7 +102,7 @@ const BarCode: React.FC = () => {
         </RNCamera>
       </Container>
 
-      <ButtonConfirm>
+      <ButtonConfirm onPress={handleNavigateNewProduct}>
         <ButtonConfirmText>Confirmar</ButtonConfirmText>
       </ButtonConfirm>
     </>
