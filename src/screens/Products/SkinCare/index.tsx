@@ -4,14 +4,14 @@ import { Image } from 'react-native';
 import mapImage from '../../../assets/map.png';
 
 import {
-  ListSnacks,
+  ListSkinCare,
   ListBrands,
   ContentList,
   ContentCategory,
   TextCategory,
   ListProducts,
-  ContainerProductSnacks,
-  ProductImageSnacks,
+  ContainerProductSkinCare,
+  ProductImage,
 } from './styles';
 
 import { IProductsProps } from '../index';
@@ -20,9 +20,9 @@ interface IProducts {
   products: IProductsProps[];
 }
 
-const Snacks: React.FC<IProducts> = ({ products }) => {
+const SkinCare: React.FC<IProducts> = ({ products }) => {
   return (
-    <ListSnacks
+    <ListSkinCare
       data={products}
       keyExtractor={(item, index) => index.toString()}
       showsVerticalScrollIndicator={false}
@@ -42,9 +42,9 @@ const Snacks: React.FC<IProducts> = ({ products }) => {
                 keyExtractor={(item, index) => index.toString()}
                 data={brand.products}
                 renderItem={({ item: product }) => (
-                  <ContainerProductSnacks>
-                    <ProductImageSnacks source={{ uri: product.image }} />
-                  </ContainerProductSnacks>
+                  <ContainerProductSkinCare>
+                    <ProductImage source={{ uri: product.image }} />
+                  </ContainerProductSkinCare>
                 )}
               />
             </ContentList>
@@ -55,4 +55,4 @@ const Snacks: React.FC<IProducts> = ({ products }) => {
   );
 };
 
-export default Snacks;
+export default SkinCare;

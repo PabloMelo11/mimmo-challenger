@@ -1,12 +1,11 @@
-import React, { useState, useEffect, useCallback, memo } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import AsyncStorage from '@react-native-community/async-storage';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { Image } from 'react-native';
-
-import mapImage from '../../assets/map.png';
-import Loading from '../../components/Loading';
 
 import Snacks from './Snacks';
+import SkinCare from './SkinCare';
+
+import Loading from '../../components/Loading';
 
 import api from '../../services/api';
 
@@ -24,16 +23,6 @@ import {
   TextSkinCare,
   NavigationSnacks,
   TextSnacks,
-  ListSkinCare,
-  ListBrands,
-  ContentList,
-  ContentCategory,
-  TextCategory,
-  ListProducts,
-  ContainerProductSkinCare,
-  ContainerProductSnacks,
-  ProductImage,
-  ProductImageSnacks,
 } from './styles';
 
 export interface IProducts {
@@ -142,38 +131,7 @@ const Products: React.FC = () => {
           </ContentLoading>
         )}
 
-        {!loading && activeSkin && (
-          <ListSkinCare
-            data={products}
-            keyExtractor={(item, index) => index.toString()}
-            showsVerticalScrollIndicator={false}
-            renderItem={({ item: product }) => (
-              <ListBrands
-                data={product.brands}
-                keyExtractor={(item, index) => index.toString()}
-                renderItem={({ item: brand }) => (
-                  <ContentList>
-                    <ContentCategory>
-                      <Image source={mapImage} />
-                      <TextCategory>{brand.name}</TextCategory>
-                    </ContentCategory>
-                    <ListProducts
-                      horizontal
-                      showsHorizontalScrollIndicator={false}
-                      keyExtractor={(item, index) => index.toString()}
-                      data={brand.products}
-                      renderItem={({ item: product }) => (
-                        <ContainerProductSkinCare>
-                          <ProductImage source={{ uri: product.image }} />
-                        </ContainerProductSkinCare>
-                      )}
-                    />
-                  </ContentList>
-                )}
-              />
-            )}
-          />
-        )}
+        {!loading && activeSkin && <SkinCare products={products} />}
 
         {!loading && activeSnacks && <Snacks products={productsSnacks} />}
       </Content>
@@ -181,4 +139,4 @@ const Products: React.FC = () => {
   );
 };
 
-export default memo(Products);
+export default Products;
