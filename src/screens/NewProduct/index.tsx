@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { useNavigation, useRoute } from '@react-navigation/native';
-import { Image, StatusBar } from 'react-native';
+import { StatusBar } from 'react-native';
+
+import { usePoints } from '../../hooks/points';
 
 import api from '../../services/api';
 
@@ -36,7 +38,12 @@ const NewProduct: React.FC = () => {
 
   const [product, setProduct] = useState<IProduct>({} as IProduct);
 
-  const handleNavigateProducts = () => navigation.navigate('Products');
+  const { sumPoints } = usePoints();
+
+  const handleNavigateProducts = useCallback(() => {
+    sumPoints({ points_value: 100 });
+    navigation.navigate('Products');
+  }, [sumPoints]);
 
   useEffect(() => {
     async function handleGetNewProduct() {

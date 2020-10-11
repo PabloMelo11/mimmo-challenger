@@ -8,6 +8,7 @@ import Snacks from './Snacks';
 import SkinCare from './SkinCare';
 
 import Loading from '../../components/Loading';
+import { usePoints } from '../../hooks/points';
 
 import api from '../../services/api';
 
@@ -53,6 +54,8 @@ const Products: React.FC = () => {
 
   const [products, setProducts] = useState<IProductsProps[]>([]);
   const [productsSnacks, setProductsSnacks] = useState<IProductsProps[]>([]);
+
+  const { points } = usePoints();
 
   const handleActiveSkinCare = useCallback(() => {
     setActiveSkin(true);
@@ -120,7 +123,7 @@ const Products: React.FC = () => {
           <TextPoints>Pontos</TextPoints>
         </ContentPoints>
 
-        <TextTotalPoints>100</TextTotalPoints>
+        <TextTotalPoints>{points}</TextTotalPoints>
 
         <Navigation>
           <NavigationSkinCare onPress={handleActiveSkinCare}>
