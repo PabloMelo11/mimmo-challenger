@@ -3,7 +3,7 @@ import { FlatList } from 'react-native';
 
 import { IProductsProps, IProducts, IBrands } from '../index';
 
-export const ListSkinCare = styled(
+export const ListSnacks = styled(
   FlatList as new () => FlatList<IProductsProps>,
 )`
   margin-top: 57px;
@@ -30,18 +30,6 @@ export const ListBrands = styled(FlatList as new () => FlatList<IBrands>)``;
 
 export const ListProducts = styled(FlatList as new () => FlatList<IProducts>)``;
 
-export const ContainerProductSkinCare = styled.View`
-  background: #ceb5ab;
-  height: 167px;
-  width: 160px;
-  box-shadow: #00000029 0px 0px 4px;
-  border-radius: 8px;
-  margin-right: 16px;
-
-  align-items: flex-end;
-  justify-content: flex-end;
-`;
-
 export const ContainerProductSnacks = styled.View`
   background: #abc3ce;
   height: 167px;
@@ -49,12 +37,6 @@ export const ContainerProductSnacks = styled.View`
   box-shadow: #00000029 0px 0px 4px;
   border-radius: 8px;
   margin-right: 16px;
-`;
-
-export const ProductImage = styled.Image`
-  width: 140px;
-  height: 147px;
-  border-radius: 8px;
 `;
 
 export const ProductImageSnacks = styled.Image`
