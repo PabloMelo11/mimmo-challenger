@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components/native';
-import { shade } from 'polished';
 
 interface IConatinerProps {
   isFocused: boolean;
