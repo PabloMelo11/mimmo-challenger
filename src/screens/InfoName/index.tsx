@@ -16,7 +16,7 @@ import {
 const InfoName: React.FC = () => {
   const navigation = useNavigation();
 
-  const handleNavigateScare = () => navigation.navigate('Scare');
+  const handleNavigateProducts = () => navigation.navigate('Products');
 
   return (
     <>
@@ -34,13 +34,13 @@ const InfoName: React.FC = () => {
             name="name"
             placeholder="Nome"
             onSubmitEditing={() => {
-              handleNavigateScare();
+              handleNavigateProducts();
             }}
           />
         </Content>
       </Container>
 
-      <ButtonContinue onPress={handleNavigateScare}>
+      <ButtonContinue onPress={handleNavigateProducts}>
         <ButtonContinueText>Continuar</ButtonContinueText>
       </ButtonContinue>
     </>

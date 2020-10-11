@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, memo } from 'react';
 import AsyncStorage from '@react-native-community/async-storage';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Image } from 'react-native';
@@ -49,7 +49,7 @@ export interface IProductsProps {
   brands: IBrands[];
 }
 
-const Scare: React.FC = () => {
+const Products: React.FC = () => {
   const [name, setName] = useState('');
   const [activeSkin, setActiveSkin] = useState(true);
   const [activeSnacks, setActiveSnacks] = useState(false);
@@ -209,4 +209,4 @@ const Scare: React.FC = () => {
   );
 };
 
-export default Scare;
+export default memo(Products);

@@ -3,7 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from '../screens/Home';
 import InfoName from '../screens/InfoName';
-import Scare from '../screens/Scare';
+import Products from '../screens/Products';
 
 const App = createStackNavigator();
 
@@ -18,7 +18,7 @@ const AppRoutes: React.FC = () => (
   >
     <App.Screen name="Home" component={Home} />
     <App.Screen name="Name" component={InfoName} />
-    <App.Screen name="Scare" component={Scare} />
+    <App.Screen name="Products" component={Products} />
   </App.Navigator>
 );
 
