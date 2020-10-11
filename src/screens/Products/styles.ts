@@ -99,3 +99,17 @@ export const TextSnacks = styled.Text<ISnacksProps>`
       border-bottom-width: 3px;
     `}
 `;
+
+export const ButtonAddProduct = styled.TouchableOpacity`
+  width: 67.3px;
+  height: 67.3px;
+  border-radius: 33.65px;
+  background: #00c3a3;
+
+  position: absolute;
+  bottom: 74.66px;
+  right: 40.7px;
+
+  align-items: center;
+  justify-content: center;
+`;

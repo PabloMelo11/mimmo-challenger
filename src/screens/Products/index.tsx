@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import AsyncStorage from '@react-native-community/async-storage';
+import { useNavigation } from '@react-navigation/native';
+
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import Snacks from './Snacks';
@@ -23,6 +25,7 @@ import {
   TextSkinCare,
   NavigationSnacks,
   TextSnacks,
+  ButtonAddProduct,
 } from './styles';
 
 export interface IProducts {
@@ -41,6 +44,8 @@ export interface IProductsProps {
 }
 
 const Products: React.FC = () => {
+  const navigation = useNavigation();
+
   const [name, setName] = useState('');
   const [activeSkin, setActiveSkin] = useState(true);
   const [activeSnacks, setActiveSnacks] = useState(false);
@@ -58,6 +63,8 @@ const Products: React.FC = () => {
     setActiveSnacks(true);
     setActiveSkin(false);
   }, []);
+
+  const handleNavigateBarCode = () => navigation.navigate('BarCode');
 
   useEffect(() => {
     async function handleGetNameAsynStorage() {
@@ -134,6 +141,10 @@ const Products: React.FC = () => {
         {!loading && activeSkin && <SkinCare products={products} />}
 
         {!loading && activeSnacks && <Snacks products={productsSnacks} />}
+
+        <ButtonAddProduct onPress={handleNavigateBarCode}>
+          <Icon name="plus" color="#fff" size={38} />
+        </ButtonAddProduct>
       </Content>
     </Container>
   );
