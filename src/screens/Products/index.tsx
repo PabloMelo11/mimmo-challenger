@@ -6,6 +6,8 @@ import { Image } from 'react-native';
 import mapImage from '../../assets/map.png';
 import Loading from '../../components/Loading';
 
+import Snacks from './Snacks';
+
 import api from '../../services/api';
 
 import {
@@ -54,6 +56,7 @@ const Products: React.FC = () => {
   const [activeSkin, setActiveSkin] = useState(true);
   const [activeSnacks, setActiveSnacks] = useState(false);
   const [loading, setLoading] = useState(false);
+
   const [products, setProducts] = useState<IProductsProps[]>([]);
   const [productsSnacks, setProductsSnacks] = useState<IProductsProps[]>([]);
 
@@ -172,38 +175,7 @@ const Products: React.FC = () => {
           />
         )}
 
-        {!loading && activeSnacks && (
-          <ListSkinCare
-            data={productsSnacks}
-            keyExtractor={(item, index) => index.toString()}
-            showsVerticalScrollIndicator={false}
-            renderItem={({ item: product }) => (
-              <ListBrands
-                data={product.brands}
-                keyExtractor={(item, index) => index.toString()}
-                renderItem={({ item: brand }) => (
-                  <ContentList>
-                    <ContentCategory>
-                      <Image source={mapImage} />
-                      <TextCategory>{brand.name}</TextCategory>
-                    </ContentCategory>
-                    <ListProducts
-                      horizontal
-                      showsHorizontalScrollIndicator={false}
-                      keyExtractor={(item, index) => index.toString()}
-                      data={brand.products}
-                      renderItem={({ item: product }) => (
-                        <ContainerProductSnacks>
-                          <ProductImageSnacks source={{ uri: product.image }} />
-                        </ContainerProductSnacks>
-                      )}
-                    />
-                  </ContentList>
-                )}
-              />
-            )}
-          />
-        )}
+        {!loading && activeSnacks && <Snacks products={productsSnacks} />}
       </Content>
     </Container>
   );
