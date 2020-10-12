@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import mapImage from '../../../assets/map.png';
 
@@ -20,7 +21,23 @@ interface IProducts {
   products: IProductsProps[];
 }
 
+interface IProduct {
+  name: string;
+  image: string;
+}
+
 const SkinCare: React.FC<IProducts> = ({ products }) => {
+  const navigation = useNavigation();
+
+  const handleNavigateDescription = useCallback((product: IProduct) => {
+    const productRoute = {
+      ...product,
+      colorStatusBar: '#ceb5ab',
+    };
+
+    navigation.navigate('Description', { product: productRoute });
+  }, []);
+
   return (
     <ListSkinCare
       data={products}
@@ -42,7 +59,9 @@ const SkinCare: React.FC<IProducts> = ({ products }) => {
                 keyExtractor={(item, index) => index.toString()}
                 data={brand.products}
                 renderItem={({ item: product }) => (
-                  <ContainerProductSkinCare>
+                  <ContainerProductSkinCare
+                    onPress={() => handleNavigateDescription(product)}
+                  >
                     <ProductImage source={{ uri: product.image }} />
                   </ContainerProductSkinCare>
                 )}

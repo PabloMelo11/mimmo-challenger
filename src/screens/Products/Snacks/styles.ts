@@ -30,7 +30,7 @@ export const ListBrands = styled(FlatList as new () => FlatList<IBrands>)``;
 
 export const ListProducts = styled(FlatList as new () => FlatList<IProducts>)``;
 
-export const ContainerProductSnacks = styled.View`
+export const ContainerProductSnacks = styled.TouchableOpacity`
   background: #abc3ce;
   height: 167px;
   width: 160px;

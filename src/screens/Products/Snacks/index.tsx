@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { useNavigation } from '@react-navigation/native';
 import { Image } from 'react-native';
 
 import mapImage from '../../../assets/map.png';
@@ -20,7 +21,23 @@ interface IProducts {
   products: IProductsProps[];
 }
 
+interface IProduct {
+  name: string;
+  image: string;
+}
+
 const Snacks: React.FC<IProducts> = ({ products }) => {
+  const navigation = useNavigation();
+
+  const handleNavigateDescription = useCallback((product: IProduct) => {
+    const productRoute = {
+      ...product,
+      colorStatusBar: '#abc3ce',
+    };
+
+    navigation.navigate('Description', { product: productRoute });
+  }, []);
+
   return (
     <ListSnacks
       data={products}
@@ -42,7 +59,9 @@ const Snacks: React.FC<IProducts> = ({ products }) => {
                 keyExtractor={(item, index) => index.toString()}
                 data={brand.products}
                 renderItem={({ item: product }) => (
-                  <ContainerProductSnacks>
+                  <ContainerProductSnacks
+                    onPress={() => handleNavigateDescription(product)}
+                  >
                     <ProductImageSnacks source={{ uri: product.image }} />
                   </ContainerProductSnacks>
                 )}
