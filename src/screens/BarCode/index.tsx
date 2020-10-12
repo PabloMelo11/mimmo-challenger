@@ -60,10 +60,10 @@ const BarCode: React.FC = () => {
           flashMode={RNCamera.Constants.FlashMode.on}
           autoFocus={RNCamera.Constants.AutoFocus.on}
           androidCameraPermissionOptions={{
-            title: 'Permission to use camera',
-            message: 'We need your permission to use your camera',
-            buttonPositive: 'Ok',
-            buttonNegative: 'Cancel',
+            title: 'Permissão para usar câmera',
+            message: 'Precisamos de sua permissão para usar sua câmera',
+            buttonPositive: 'Aceitar',
+            buttonNegative: 'Cancelar',
           }}
           googleVisionBarcodeType={
             RNCamera.Constants.GoogleVisionBarcodeDetection.BarcodeType.EAN_13
