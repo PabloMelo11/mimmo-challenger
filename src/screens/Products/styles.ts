@@ -1,7 +1,4 @@
 import styled, { css } from 'styled-components/native';
-import { FlatList } from 'react-native';
-
-import { IBrands, IProducts, IProductsProps } from './index';
 
 interface ISkinCareProps {
   active: boolean;

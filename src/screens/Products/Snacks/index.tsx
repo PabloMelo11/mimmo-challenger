@@ -4,6 +4,8 @@ import { Image } from 'react-native';
 
 import mapImage from '../../../assets/map.png';
 
+import { IProductsProps } from '../../../hooks/products';
+
 import {
   ListSnacks,
   ListBrands,
@@ -14,8 +16,6 @@ import {
   ContainerProductSnacks,
   ProductImageSnacks,
 } from './styles';
-
-import { IProductsProps } from '../index';
 
 interface IProducts {
   products: IProductsProps[];

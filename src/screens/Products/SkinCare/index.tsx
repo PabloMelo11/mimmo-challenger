@@ -4,6 +4,8 @@ import { useNavigation } from '@react-navigation/native';
 
 import mapImage from '../../../assets/map.png';
 
+import { IProductsProps } from '../../../hooks/products';
+
 import {
   ListSkinCare,
   ListBrands,
@@ -14,8 +16,6 @@ import {
   ContainerProductSkinCare,
   ProductImage,
 } from './styles';
-
-import { IProductsProps } from '../index';
 
 interface IProducts {
   products: IProductsProps[];
