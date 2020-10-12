@@ -91,7 +91,7 @@ const BarCode: React.FC = () => {
 
                 <ContentBarCode>
                   <ContentTextBarCode>
-                    Numero do codigo de barras:
+                    Número do código de barras:
                   </ContentTextBarCode>
 
                   <TextBarCode>{barCode}</TextBarCode>

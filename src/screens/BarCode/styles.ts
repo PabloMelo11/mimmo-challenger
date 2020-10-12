@@ -27,7 +27,7 @@ export const ContentBarCode = styled.View`
   position: absolute;
   bottom: 50px;
   background-color: #fff;
-  opacity: 0.3;
+  opacity: 0.6;
   width: 100%;
   height: 100px;
 `;
