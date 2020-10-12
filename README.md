@@ -30,6 +30,10 @@
 
 This application and the challenge proposed by mimmo free.
 
+<h1 align="center">
+    <img alt="mimmo" title="mimmo" src=".github/video.gif" width="px" />
+</h1>
+
 ## 🚀 Technologies
 
 This project was developed with the following technologies:
@@ -42,11 +46,19 @@ This project was developed with the following technologies:
 - [React Native BarCode Mask](https://www.npmjs.com/package/react-native-barcode-mask)
 - [React Native Vector Icons](console.aws.amazon.com/console/home?nc2=h_ct&src=header-signin&region=us-east-1)
 
+## 🔥️ Functional requirements
+
+- The user must be able to access the "mission"
+- The user must be able to enter his name
+- The user should be able to see the list of all products that he said he consumes
+- The user must be able to add new products to his profile
+- The user must be able to view the product read
+
 ## 🤔 Get Started
 
 - You will only need to have Node installed on your machine, and after that, clone this repository:
 ```sh
-  $ git clone https://github.com/PabloMelo11/mimo-challenger.git
+  $ git clone https://github.com/PabloMelo11/mimmo-challenger.git
 ```
 
 After that, run the command below to install the dependencies.
