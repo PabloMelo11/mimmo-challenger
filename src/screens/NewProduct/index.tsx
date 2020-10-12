@@ -3,6 +3,7 @@ import { useNavigation, useRoute } from '@react-navigation/native';
 import { StatusBar } from 'react-native';
 
 import { usePoints } from '../../hooks/points';
+import { useProducts } from '../../hooks/products';
 
 import api from '../../services/api';
 
@@ -39,11 +40,18 @@ const NewProduct: React.FC = () => {
   const [product, setProduct] = useState<IProduct>({} as IProduct);
 
   const { sumPoints } = usePoints();
+  const { handleAddNewProductSkinCare } = useProducts();
 
-  const handleNavigateProducts = useCallback(() => {
-    sumPoints({ points_value: 100 });
-    navigation.navigate('Products');
-  }, [sumPoints]);
+  const handleNavigateProducts = useCallback(
+    (product: IProduct) => {
+      sumPoints({ points_value: 100 });
+
+      handleAddNewProductSkinCare(product);
+
+      navigation.navigate('Products');
+    },
+    [sumPoints],
+  );
 
   useEffect(() => {
     async function handleGetNewProduct() {
@@ -82,7 +90,7 @@ const NewProduct: React.FC = () => {
         </Content>
       </Container>
 
-      <ButtonSave onPress={handleNavigateProducts}>
+      <ButtonSave onPress={() => handleNavigateProducts(product)}>
         <ButtonSaveText>Salvar</ButtonSaveText>
       </ButtonSave>
     </>

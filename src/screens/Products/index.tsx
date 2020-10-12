@@ -8,10 +8,9 @@ import Snacks from './Snacks';
 import SkinCare from './SkinCare';
 
 import Loading from '../../components/Loading';
+
 import { usePoints } from '../../hooks/points';
 import { useProducts } from '../../hooks/products';
-
-import api from '../../services/api';
 
 import {
   Container,
