@@ -41,6 +41,7 @@ This project was developed with the following technologies:
 - [React Native](https://facebook.github.io/react-native/)
 - [Context API](https://pt-br.reactjs.org/docs/context.html)
 - [AsyncStorage](https://github.com/react-native-community/async-storages)
+- [React Native Testing Library](https://github.com/callstack/react-native-testing-library)
 - [Styled-components](https://styled-components.com/)
 - [React Navigation v5](https://reactnavigation.org/)
 - [React Native Camera](https://github.com/react-native-community/react-native-camera)
@@ -75,6 +76,11 @@ after that, start your emulator or device and run the command
 When installing the application, run the command
 ```sh
   $ yarn start
+```
+
+Run tests
+```sh
+  $  yarn test
 ```
 
 Made with ♥ by Pablo Melo :wave: [Get in touch!](https://www.linkedin.com/in/pablo-melo-377297161/)
