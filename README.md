@@ -40,6 +40,7 @@ This project was developed with the following technologies:
 
 - [React Native](https://facebook.github.io/react-native/)
 - [Context API](https://pt-br.reactjs.org/docs/context.html)
+- [AsyncStorage](https://github.com/react-native-community/async-storages)
 - [Styled-components](https://styled-components.com/)
 - [React Navigation v5](https://reactnavigation.org/)
 - [React Native Camera](https://github.com/react-native-community/react-native-camera)
