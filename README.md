@@ -1,9 +1,9 @@
 <h1 align="center">
-    <img alt="mimmo" title="#mimmo" src="src/assets/logo.png" width="250px" />
+    <img alt="mimoo" title="#mimoo" src="src/assets/logo.png" width="250px" />
 </h1>
 
 <h4 align="center">
-	🚀 Mimmo
+	🚀 mimoo
 </h4>
 
 <p align="center">
@@ -28,10 +28,10 @@
 
 ## 💻 Project
 
-This application and the challenge proposed by mimmo free.
+This application and the challenge proposed by mimoo free.
 
 <h1 align="center">
-    <img alt="mimmo" title="mimmo" src=".github/video.gif" width="px" />
+    <img alt="mimoo" title="mimoo" src=".github/video.gif" width="px" />
 </h1>
 
 ## 🚀 Technologies
@@ -60,7 +60,7 @@ This project was developed with the following technologies:
 
 - You will only need to have Node installed on your machine, and after that, clone this repository:
 ```sh
-  $ git clone https://github.com/PabloMelo11/mimmo-challenger.git
+  $ git clone https://github.com/PabloMelo11/mimoo-challenger.git
 ```
 
 After that, run the command below to install the dependencies.

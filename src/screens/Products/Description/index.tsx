@@ -54,7 +54,7 @@ const Description: React.FC = () => {
           <ContentProductText>
             <PointsText>100 pontos adquiridos com esse produto</PointsText>
 
-            <ProductText>Produto mais consumido na mimmo</ProductText>
+            <ProductText>Produto mais consumido na mimoo</ProductText>
           </ContentProductText>
 
           <ContentNewProduct>
